@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailing Student Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="BgAll"></div>
+    <div class="text-center">
+        <h1 class="text-2xl font-bold mt-10 mb-4">LỄ HỘI ĐUA GHE</h1>
+        <div class="flex items-center justify-center space-x-4 mb-4">
+            <input type="file" id="fileInput" accept=".csv" class="bg-gray-200 text-gray-700 py-2 px-4 rounded">
+            <button id="loadButton" class="bg-gray-200 text-gray-700 py-2 px-4 rounded">Load File</button>
+            <button id="startButton" class="bg-blue-500 text-white py-2 px-4 rounded">Start</button>
+        </div>
+    </div>
+
+    <div id="raceTrackBackground">
+        <div id="raceTrack">
+        </div>
+    </div>
+    <div class="flex items-center justify-center space-x-4">
+        <button id="winner" class="bg-blue-500 text-white text-2xl py-4 px-10 mt-2 rounded hidden"
+            onclick="redirectToNewPage()">winner</button>
+    </div>
+    <script>
+        function redirectToNewPage() {
+            window.location.href = 'cauhoi.html';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

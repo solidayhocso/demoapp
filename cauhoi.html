@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div id="BgAllQuiz"></div>
+
+<body class="bg-gray-100 flex items-start justify-center h-screen pt-10 ">
+    <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4 text-center">KIỂM TRA ĐẦU GIỜ</h1>
+        <h2 class="text-2xl font-bold mb-4 text-center">MÔN: VẬT LÝ</h2>
+
+        <input type="file" id="fileInput" class="mb-4">
+        <button id="startButton" class="bg-blue-500 text-white py-2 px-4 rounded mb-4">Start</button>
+
+
+        <div id="quizContainer" class="hidden">
+            <div id="iconContainer" class="flex mb-4"></div>
+            <div id="questionContainer" class="mb-4">
+                <img id="questionImage" src="" alt="" class="mb-4 hidden w-full">
+                <p id="question" class="text-lg font-semibold mb-4 text-xl"></p>
+            </div>
+            <div id="answersContainer" class="mb-4"></div>
+            <div id="congratsMessage" class="hidden text-center mt-2">Chúc mừng! Câu trả lời chính xác.</div>
+            <div id="wrongMessage" class="hidden text-center mt-2">Ohh! Câu trả lời chưa chính xác.</div>
+            <div id="finalMsg" class="hidden text-center mt-2"></div>
+            <div class="flex w-full max-w-md bg-white rounded-lg shadow-lg justify-center mt-2">
+                <button id="backGame" class="bg-red-500 text-white py-2 px-4 rounded hidden"
+                    onclick="redirectToNewPage()">Back</button>
+                <button id="nextButton" class="bg-blue-500 text-white py-2 px-4 rounded hidden">Next</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function redirectToNewPage() {
+            window.location.href = 'duaghe.html'; // Replace with your new page URL
+        }
+    </script>
+    <script src="questionScript.js"></script>
+
+</body>
+
+
+</html>

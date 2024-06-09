@@ -1,0 +1,202 @@
+#raceTrackBackground {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background: url('images/raceTrackBackground.png') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+    /* Ensure it stays behind the boats */
+}
+
+#raceTrack {
+    position: relative;
+    top: 40%;
+    width: 100%;
+    height: 30vh;
+    /* 50% of the viewport height */
+    /* overflow-x: scroll; */
+}
+
+.boat {
+    position: absolute;
+    width: 150px;
+    /* Adjust width as needed */
+    height: 150px;
+    /* Adjust height as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 50px;
+    /* Center the text vertically */
+    box-sizing: border-box;
+    border: none;
+    /* Remove border */
+    color: white;
+    /* Set the text color */
+    font-weight: bold;
+    /* Make the text bold */
+    left: 0;
+    z-index: 2;
+    /* Ensure boats start at the leftmost position */
+}
+
+.boat::before {
+    content: attr(data-name);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -15%);
+    /* Center the name on the boat */
+    text-align: center;
+    font-size: 15px;
+    color: black;
+}
+
+@keyframes upDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.moving {
+    animation: upDown 1s infinite;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#congratsMessage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: green;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#wrongMessage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(161, 5, 0);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#wrongMessage.show {
+    opacity: 1;
+}
+
+#congratsMessage.show {
+    opacity: 1;
+}
+
+#finalMsg {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(189, 6, 0);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#finalMsg.show {
+    opacity: 1;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+#BgAll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bg2.jpg');
+    /* Replace with your background image URL */
+    background-color: rgb(119, 131, 117);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#BgAllQuiz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/tracnghiem.jpg');
+    /* Replace with your background image URL */
+    background-color: rgb(119, 131, 117);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#bgHome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/BgHome-01.jpg');
+    /* Replace with your background image URL */
+    background-color: rgb(119, 131, 117);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
