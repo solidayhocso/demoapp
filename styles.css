@@ -177,20 +177,20 @@
     z-index: -1;
 }
 
-#bgHome {
+#BgAllQuiz {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/BgHome-01.jpg');
+    background-image: url('images/BgHome01.jpg');
     /* Replace with your background image URL */
     background-color: rgb(119, 131, 117);
     background-size: cover;
     background-position: center;
     z-index: -1;
-    overflow: hidden;
 }
+
 
 
 
