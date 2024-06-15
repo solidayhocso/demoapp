@@ -12,11 +12,13 @@
 <body>
     <div id="BgAll"></div>
     <div class="text-center">
-        <h1 class="text-2xl font-bold mt-10 mb-4">LỄ HỘI ĐUA GHE</h1>
+        <h1 class="text-2xl font-bold mt-10 mb-4 text-blue-700">LỄ HỘI ĐUA GHE</h1>
         <div class="flex items-center justify-center space-x-4 mb-4">
-            <input type="file" id="fileInput" accept=".csv" class="bg-gray-200 text-gray-700 py-2 px-4 rounded">
-            <button id="loadButton" class="bg-gray-200 text-gray-700 py-2 px-4 rounded">Load File</button>
-            <button id="startButton" class="bg-blue-500 text-white py-2 px-4 rounded">Start</button>
+            <button id="btnHome" class="bg-blue-600 text-white py-2 px-4 rounded-full" onclick="btnHomeClick()">Trang
+                chủ</button>
+            <input type="file" id="fileInput" accept=".csv" class="bg-blue-500 text-white py-1 px-2 rounded-full">
+            <button id="loadButton" class="bg-blue-500 text-white py-2 px-4 rounded-full">Load File</button>
+            <button id="startButton" class="bg-blue-500 text-white py-2 px-4 rounded-full">Start</button>
         </div>
     </div>
 
@@ -25,12 +27,16 @@
         </div>
     </div>
     <div class="flex items-center justify-center space-x-4">
-        <button id="winner" class="bg-blue-500 text-white text-2xl py-4 px-10 mt-2 rounded hidden"
+        <button id="winner" class="bg-blue-500 text-white text-2xl font-bold py-4 px-10 mt-2 rounded-full hidden"
             onclick="redirectToNewPage()">winner</button>
+
     </div>
     <script>
         function redirectToNewPage() {
             window.location.href = 'cauhoi.html';
+        }
+        function btnHomeClick() {
+            window.location.href = 'Gioithieu.html';
         }
     </script>
     <script src="script.js"></script>
