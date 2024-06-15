@@ -221,8 +221,11 @@
 <body class="flex flex-col justify-between h-screen">
     <div class="game-background flex items-center justify-center">
         <div class="absolute top-0 center p-4">
-            <input type="file" id="csvFile" accept=".csv" class="bg-blue-500 text-white py-1 px-3 rounded">
-            <button id="loadFile" class="bg-blue-500 text-white py-2 px-4 rounded">Load File</button>
+            <button id="btnHome" class="bg-blue-500 text-white py-2 px-4 rounded-full mb-4"
+                onclick="btnHomeClick()">Trang
+                chủ</button>
+            <input type="file" id="csvFile" accept=".csv" class="bg-blue-500 text-white py-1 px-2 rounded-full">
+            <button id="loadFile" class="bg-blue-500 text-white py-2 px-4 rounded-full mb-4">Load File</button>
         </div>
         <div id="gamemsg" class=" absolute top-14 center p-4 font-bold flex hidden text-white">
             HÃY TRẢ LỜI
@@ -249,7 +252,12 @@
             <!-- Answers will be populated here -->
         </div>
     </div>
+    <script>
 
+        function btnHomeClick() {
+            window.location.href = 'Gioithieu.html';
+        }
+    </script>
     <script src="game.js"></script>
 </body>
 
