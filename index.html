@@ -9,18 +9,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <div id="bgHome"></div>
-<div class="relative absolute top-20">
+<!-- <div class="relative absolute top-20">
     <div class="relative absolute top-60">
         <button id="startButton"
             class="font-semibold absolute top-60 right-10 bg-blue-500 text-white py-2 px-4 rounded-full"
             onclick="redirectToNewPage()">
             Thiết bị dạy học số</button>
+    </div> -->
+<div class="relative absolute top-60">
+    <div class="relative absolute top-20">
+        <div class=" relative absolute top-60 right-20">
+            <div>
+                <h1 class="flex text-2xl justify-end font-bold mt-2 mb-4 text-green-500">ỨNG DỤNG CNTT HỖ TRỢ
+                    DẠY HỌC
+                </h1>
+            </div>
+            <div class="flex justify-end w-full space-x-4">
+                <button onclick="openDuaGhe()"
+                    class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700">Chọn ngẫu nhiên</button>
+                <button onclick="openKtBaiCu()"
+                    class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700">Kiểm tra bài cũ</button>
+                <button onclick="openOnTap()" class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700">Ôn
+                    tập bài cũ</button>
+            </div>
+        </div>
     </div>
+
+</div>
+
 </div>
 
 <script>
-    function redirectToNewPage() {
+    function openDuaGhe() {
         window.location.href = 'duaghe.html'; // Replace with your new page URL
+    }
+    function openKtBaiCu() {
+        window.location.href = 'cauhoi.html'; // Replace with your new page URL
+    }
+    function openOnTap() {
+        window.location.href = 'gameontap.html'; // Replace with your new page URL
     }
 </script>
 
