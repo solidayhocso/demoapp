@@ -62,7 +62,7 @@ function displayQuestion() {
     });
 
     if (questionData.imageLink) {
-        questionImage.src = `images/cauHoi/${questionData.imageLink}`;
+        questionImage.src = `${questionData.imageLink}`;
         questionImage.classList.remove('hidden');
     } else {
         questionImage.classList.add('hidden');
